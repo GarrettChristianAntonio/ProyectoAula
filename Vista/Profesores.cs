@@ -341,7 +341,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("No se pudo realizar la Operación");
+                MessageBox.Show("Operación Fallida");
             }
         }
 
@@ -459,6 +459,7 @@ namespace Vista
 
         private void profesorpagoscrear_Click(object sender, EventArgs e)
         {
+            
             cambiarEstado();
             accionActual = "crearPago";
             cbIdProfesor.Enabled = true;
