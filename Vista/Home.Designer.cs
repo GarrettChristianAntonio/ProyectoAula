@@ -41,51 +41,57 @@ namespace Vista
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(686, 151);
+            this.button1.Location = new System.Drawing.Point(1060, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Reservar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(686, 215);
+            this.button2.Location = new System.Drawing.Point(964, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Administrar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(578, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(1093, 338);
             this.dataGridView1.TabIndex = 2;
             // 
             // cbAula
             // 
+            this.cbAula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAula.FormattingEnabled = true;
-            this.cbAula.Location = new System.Drawing.Point(61, 67);
+            this.cbAula.Location = new System.Drawing.Point(42, 44);
             this.cbAula.Name = "cbAula";
             this.cbAula.Size = new System.Drawing.Size(121, 21);
             this.cbAula.TabIndex = 3;
+            this.cbAula.SelectedIndexChanged += new System.EventHandler(this.cbAula_SelectedIndexChanged);
             // 
             // cbMes
             // 
+            this.cbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMes.FormattingEnabled = true;
-            this.cbMes.Location = new System.Drawing.Point(405, 67);
+            this.cbMes.Location = new System.Drawing.Point(341, 44);
             this.cbMes.Name = "cbMes";
             this.cbMes.Size = new System.Drawing.Size(121, 21);
             this.cbMes.TabIndex = 4;
+            this.cbMes.SelectedIndexChanged += new System.EventHandler(this.cbMes_SelectedIndexChanged);
             // 
             // cbAnio
             // 
+            this.cbAnio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAnio.FormattingEnabled = true;
-            this.cbAnio.Location = new System.Drawing.Point(248, 67);
+            this.cbAnio.Location = new System.Drawing.Point(189, 44);
             this.cbAnio.Name = "cbAnio";
             this.cbAnio.Size = new System.Drawing.Size(121, 21);
             this.cbAnio.TabIndex = 5;
@@ -93,7 +99,7 @@ namespace Vista
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(580, 63);
+            this.btnConsultar.Location = new System.Drawing.Point(521, 42);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(75, 23);
             this.btnConsultar.TabIndex = 6;
@@ -105,7 +111,7 @@ namespace Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1166, 450);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.cbAnio);
             this.Controls.Add(this.cbMes);
@@ -113,8 +119,13 @@ namespace Vista
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

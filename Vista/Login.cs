@@ -22,16 +22,19 @@ namespace Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int nivelLogeo = _logic.Login(textBox1.Text, textBox2.Text);
-            if(nivelLogeo > 0)
-            {
-                new Home(nivelLogeo,_logic).Show();
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrecto.");
-            }
-
+            
+                int nivelLogeo = _logic.Login(textBox1.Text, textBox2.Text);
+                if (nivelLogeo > 0)
+                {
+                    new Home(nivelLogeo, _logic).Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecto.");
+                }
+           
+           
 
         }
     }
